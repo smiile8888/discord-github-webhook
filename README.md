@@ -21,20 +21,25 @@ One simple way to automate the task is using Webhook connecting between Discord 
     - Go to `Settings` on your repository
     - Go to `Webhooks`, click `Add webhook`
     ![image](./images/2.1.png)
-    - Paste the discord webhook URL on `Payload` field, and add `/github` (__DO NOT__ forget to add `/github`)
+    - Paste the discord webhook URL on `Payload` field, and add `/github`
+    
+        __DO NOT__ forget to add `/github`
     - Choose `application/json` for `Content type`
     - Next, select the events to trigger the webhook.
-    There is a lot for you to choose. You can select whatever you want ;)
-    In my case, for the demo purpose, I select as shown in the attached image. (__Note:__ you can edit the setting later on, so don't worry!)
+    
+        There is a lot for you to choose. You can select whatever you want 😉
+        In my case, for the demo purpose, I select some options.
+        
+        __Note:__ you can edit the setting later on, so don't worry!
     ![image](./images/2.2.png)
     - Then click `Add webhook`
     ![image](./images/2.3.png)
     - Hoorey, you now finish setting up
     ![image](./images/2.4.png)
 
-It's time to try it out!
+### It's time to try it out!
 
-I will add a comment to the issue, then GitHub should technically send a message to my discord channel.
+I will add a comment to the issue, then, technically, GitHub should automatically send a message to my discord channel.
 ![image](./images/test.1.png)
 
 Yayy! the message is immediately sent over.
