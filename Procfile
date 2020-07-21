@@ -1,3 +1,2 @@
-web: npm run start:app
-web: npm run start:bot
+web: npm start
 worker: node index.js
