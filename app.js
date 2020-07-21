@@ -7,11 +7,10 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send(`The server is and running at ${process.env.PORT}`);
+    res.send(`Hello Hi Stranger 👋`);
 });
 
 app.post('/github', (req, res) => {
-    console.log(req.body);
     console.log(`I got some message: ${JSON.stringify(req.body)}`);
     return res.send('Received a message!');
 })
