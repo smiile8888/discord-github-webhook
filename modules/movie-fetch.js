@@ -1,4 +1,7 @@
 const fetch = require('node-fetch');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 function formatInfo(info) {
     function getRating(name, data) {
@@ -23,8 +26,7 @@ function formatInfo(info) {
 
 
 async function fetchMoviesInfo(name) {
-    const API_KEY = `63c12de2`;
-    let url=`http://www.omdbapi.com/?t=${name}&apikey=${API_KEY}`
+    const url =`http://www.omdbapi.com/?t=${name}&apikey=${process.env.MOVIE_API_KEY}`
 
     let response = await fetch(url);
     let content;

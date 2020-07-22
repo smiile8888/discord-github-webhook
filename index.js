@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const dotenv = require('dotenv');
-const movie = require('./modules/movies.js');
+const movie = require('./modules/movie-fetch.js');
 
 dotenv.config();
 
@@ -10,7 +10,6 @@ const cli = Object.freeze({
     PING: `ping`,
     GG: `gg`,
 });
-
 
 function processMsg(content) {
     let splittedContent = String(content).split(" ");
@@ -21,24 +20,21 @@ function processMsg(content) {
     }
 }
 
-
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
 });
 
 client.on('message', msg => {
     const content = processMsg(msg.content);
-    console.log(content);
+    // console.log(content);
     const cmd = content.cmd;
     let argument = content.argument;
 
     if (cmd === cli.PING) {
-        console.log(msg)
         msg.reply("Pong!");
     }
 
     if (cmd === cli.GG) {
-        console.log(msg)
         msg.reply("GG Pong!");
     }
 
