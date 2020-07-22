@@ -41,7 +41,7 @@ client.on('message', msg => {
     if (cmd === cli.MOVIE) {
         movie.fetchMoviesInfo(argument).then((res) => {
             msg.reply(res);
-        });
+        }).catch(() => { msg.reply("Movie not found!"); });
     }
 });
 
