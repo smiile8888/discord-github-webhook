@@ -1,15 +1,14 @@
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
-
 dotenv.config();
 
 function formatInfo(info) {
     function getRating(name, data) {
-        const rating = data.filter((rating) => { 
-            return rating.Source === name; 
+        const rating = data.filter((rating) => {
+            return rating.Source === name;
         });
 
-        return rating.length > 0 ? rating[0].Value: `N/A`;
+        return rating.length > 0 ? rating[0].Value : `N/A`;
     }
 
     let template = `
